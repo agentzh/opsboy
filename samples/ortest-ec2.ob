@@ -55,7 +55,7 @@ ngx-lua-tests-firewall-rules {
 }
 
 ngx-lua-tests-ip-settings {
-    test '[ $(sudo ip addr show lo | grep -E "10.254.254.[12]/24" | wc -l) -eq 1 ]';
+    test '[ $(sudo ip addr show lo | grep -E "10.254.254.[12]/24" | wc -l) -eq 2 ]';
     sh 'sudo ip addr add 10.254.254.1/24 dev lo';
     sh 'sudo ip addr add 10.254.254.2/24 dev lo';
 }
